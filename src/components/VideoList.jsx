@@ -2,14 +2,17 @@ const videos = [
     {
         name: 'Closures from A to Z',
         duration: '12 minutes',
+        id: 1,
     },
     {
         name: 'JS Functions',
         duration: '15 minutes',
+        id: 2,
     },
     {
         name: 'Array',
         duration: '8 minutes',
+        id: 3,
     },
 ]
 export function VideoList(){
@@ -19,7 +22,7 @@ export function VideoList(){
             {
                 videos.map((video) => {
                     return(
-                        <div>
+                        <div key={video.id}>
                             <p>
                                 {video.name}
                             </p>
